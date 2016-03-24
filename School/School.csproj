@@ -1,0 +1,1249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CD505BFA-BC12-4D20-9548-26EEB0DE610A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>School</RootNamespace>
+    <AssemblyName>School</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicrosoftReportViewerWebForms.11.0.0.0\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicrosoftReportViewerWebForms.11.0.0.0\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicrosoftReportViewerWebForms.11.0.0.0\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\DIS\DIS\bin\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\generated-sources\annotations\" />
+    <Folder Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\surefire\" />
+    <Folder Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\generated-sources\annotations\" />
+    <Folder Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\surefire\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Upload\Company_Img\MVM-APP-LOGO.png" />
+    <Content Include="App_Upload\User_Img\avatar.png" />
+    <Content Include="Content\Images\gallery\login.jpg" />
+    <Content Include="Content\Lato.css" />
+    <Content Include="Content\OpenSans.css" />
+    <Content Include="Content\Plugins\animation-css\animate.min.css" />
+    <Content Include="Content\Plugins\bootstrap\css\bootstrap-override.css" />
+    <Content Include="Content\Plugins\bootstrap\css\bootstrap-rtl.min.css" />
+    <Content Include="Content\Plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\Plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\Plugins\bootstrap\css\jasny-bootstrap.css" />
+    <Content Include="Content\Plugins\bootstrap\css\jasny-bootstrap.min.css" />
+    <Content Include="Content\Plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\Plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\Plugins\bootstrap\js\jasny-bootstrap.js" />
+    <Content Include="Content\Plugins\bootstrap\js\jasny-bootstrap.min.js" />
+    <Content Include="Content\Plugins\bootstrap_datepicker\bootstrap-datepicker.css" />
+    <Content Include="Content\Plugins\bootstrap_datepicker\bootstrap-datepicker.min.css" />
+    <Content Include="Content\Plugins\bootstrap_datepicker\bootstrap-datepicker.standalone.css" />
+    <Content Include="Content\Plugins\bootstrap_datepicker\bootstrap-datepicker.standalone.min.css" />
+    <Content Include="Content\Plugins\bootstrap_datepicker\bootstrap-datepicker3.css" />
+    <Content Include="Content\Plugins\bootstrap_datepicker\bootstrap-datepicker3.min.css" />
+    <Content Include="Content\Plugins\bootstrap_datepicker\bootstrap-datepicker3.standalone.css" />
+    <Content Include="Content\Plugins\bootstrap_datepicker\bootstrap-datepicker3.standalone.min.css" />
+    <Content Include="Content\Plugins\bootstrap_loading\css\prism.css" />
+    <Content Include="Content\Plugins\bootstrap_loading\lada.min.css" />
+    <Content Include="Content\Plugins\datatable\css\jquery_dataTables.css" />
+    <Content Include="Content\Plugins\datatable\css\jquery_dataTables.min.css" />
+    <Content Include="Content\Plugins\datatable\css\jquery_dataTables_themeroller.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\AutoFill\css\dataTables.autoFill.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\AutoFill\css\dataTables.autoFill.min.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\AutoFill\images\filler.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\ColReorder\css\dataTables.colReorder.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\ColReorder\css\dataTables.colReorder.min.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\ColReorder\images\insert.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\ColVis\css\dataTables.colVis.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\ColVis\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\ColVis\css\dataTables.colVis.min.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\FixedColumns\css\dataTables.fixedColumns.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\FixedColumns\css\dataTables.fixedColumns.min.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\FixedHeader\css\dataTables.fixedHeader.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\FixedHeader\css\dataTables.fixedHeader.min.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\KeyTable\css\dataTables.keyTable.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\KeyTable\css\dataTables.keyTable.min.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\Responsive\css\dataTables.responsive.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\Scroller\css\dataTables.scroller.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\Scroller\css\dataTables.scroller.min.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\Scroller\images\loading-background.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\css\dataTables.tableTools.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\css\dataTables.tableTools.min.css" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\background.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\collection.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\collection_hover.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\copy.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\copy_hover.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\csv.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\csv_hover.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\pdf.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\pdf_hover.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\print.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\print_hover.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\xls.png" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\xls_hover.png" />
+    <Content Include="Content\Plugins\datatable\images\back_disabled.png" />
+    <Content Include="Content\Plugins\datatable\images\back_enabled.png" />
+    <Content Include="Content\Plugins\datatable\images\back_enabled_hover.png" />
+    <Content Include="Content\Plugins\datatable\images\favicon.ico" />
+    <Content Include="Content\Plugins\datatable\images\forward_disabled.png" />
+    <Content Include="Content\Plugins\datatable\images\forward_enabled.png" />
+    <Content Include="Content\Plugins\datatable\images\forward_enabled_hover.png" />
+    <Content Include="Content\Plugins\datatable\images\sort_asc.png" />
+    <Content Include="Content\Plugins\datatable\images\sort_asc_disabled.png" />
+    <Content Include="Content\Plugins\datatable\images\sort_both.png" />
+    <Content Include="Content\Plugins\datatable\images\sort_desc.png" />
+    <Content Include="Content\Plugins\datatable\images\sort_desc_disabled.png" />
+    <Content Include="Content\Plugins\dropzone\dropzone.css" />
+    <Content Include="Content\Plugins\font-awesome-animation\demo\favicon.png" />
+    <Content Include="Content\Plugins\font-awesome-animation\demo\index.html" />
+    <Content Include="Content\Plugins\font-awesome-animation\demo\styles\main.css" />
+    <Content Include="Content\Plugins\font-awesome-animation\demo\styles\monokai.syntax.css" />
+    <Content Include="Content\Plugins\font-awesome-animation\demo\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\Plugins\font-awesome-animation\demo\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\Plugins\font-awesome-animation\demo\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Plugins\font-awesome-animation\dist\font-awesome-animation.css" />
+    <Content Include="Content\Plugins\font-awesome-animation\dist\font-awesome-animation.min.css" />
+    <Content Include="Content\Plugins\font-awesome-animation\font-awesome-animation.min.css" />
+    <Content Include="Content\Plugins\font-awesome-animation\src\font-awesome-animation.css" />
+    <Content Include="Content\Plugins\font_awesome\font-awesome.css" />
+    <Content Include="Content\Plugins\font_awesome\font-awesome.min.css" />
+    <Content Include="Content\Plugins\font_awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Plugins\iCheck\all.css" />
+    <Content Include="Content\Plugins\iCheck\flat\aero%402x.png" />
+    <Content Include="Content\Plugins\iCheck\flat\aero.css" />
+    <Content Include="Content\Plugins\iCheck\flat\aero.png" />
+    <Content Include="Content\Plugins\iCheck\flat\blue%402x.png" />
+    <Content Include="Content\Plugins\iCheck\flat\blue.css" />
+    <Content Include="Content\Plugins\iCheck\flat\blue.png" />
+    <Content Include="Content\Plugins\iCheck\flat\flat%402x.png" />
+    <Content Include="Content\Plugins\iCheck\flat\flat.css" />
+    <Content Include="Content\Plugins\iCheck\flat\flat.png" />
+    <Content Include="Content\Plugins\iCheck\flat\green%402x.png" />
+    <Content Include="Content\Plugins\iCheck\flat\green.css" />
+    <Content Include="Content\Plugins\iCheck\flat\green.png" />
+    <Content Include="Content\Plugins\iCheck\flat\grey%402x.png" />
+    <Content Include="Content\Plugins\iCheck\flat\grey.css" />
+    <Content Include="Content\Plugins\iCheck\flat\grey.png" />
+    <Content Include="Content\Plugins\iCheck\flat\orange%402x.png" />
+    <Content Include="Content\Plugins\iCheck\flat\orange.css" />
+    <Content Include="Content\Plugins\iCheck\flat\orange.png" />
+    <Content Include="Content\Plugins\iCheck\flat\pink%402x.png" />
+    <Content Include="Content\Plugins\iCheck\flat\pink.css" />
+    <Content Include="Content\Plugins\iCheck\flat\pink.png" />
+    <Content Include="Content\Plugins\iCheck\flat\purple%402x.png" />
+    <Content Include="Content\Plugins\iCheck\flat\purple.css" />
+    <Content Include="Content\Plugins\iCheck\flat\purple.png" />
+    <Content Include="Content\Plugins\iCheck\flat\red%402x.png" />
+    <Content Include="Content\Plugins\iCheck\flat\red.css" />
+    <Content Include="Content\Plugins\iCheck\flat\red.png" />
+    <Content Include="Content\Plugins\iCheck\flat\yellow%402x.png" />
+    <Content Include="Content\Plugins\iCheck\flat\yellow.css" />
+    <Content Include="Content\Plugins\iCheck\flat\yellow.png" />
+    <Content Include="Content\Plugins\iCheck\flat\_all.css" />
+    <Content Include="Content\Plugins\iCheck\futurico\futurico%402x.png" />
+    <Content Include="Content\Plugins\iCheck\futurico\futurico.css" />
+    <Content Include="Content\Plugins\iCheck\futurico\futurico.png" />
+    <Content Include="Content\Plugins\iCheck\line\aero.css" />
+    <Content Include="Content\Plugins\iCheck\line\blue.css" />
+    <Content Include="Content\Plugins\iCheck\line\green.css" />
+    <Content Include="Content\Plugins\iCheck\line\grey.css" />
+    <Content Include="Content\Plugins\iCheck\line\line%402x.png" />
+    <Content Include="Content\Plugins\iCheck\line\line.css" />
+    <Content Include="Content\Plugins\iCheck\line\line.png" />
+    <Content Include="Content\Plugins\iCheck\line\orange.css" />
+    <Content Include="Content\Plugins\iCheck\line\pink.css" />
+    <Content Include="Content\Plugins\iCheck\line\purple.css" />
+    <Content Include="Content\Plugins\iCheck\line\red.css" />
+    <Content Include="Content\Plugins\iCheck\line\yellow.css" />
+    <Content Include="Content\Plugins\iCheck\line\_all.css" />
+    <Content Include="Content\Plugins\iCheck\minimal\aero%402x.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\aero.css" />
+    <Content Include="Content\Plugins\iCheck\minimal\aero.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\blue%402x.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\blue.css" />
+    <Content Include="Content\Plugins\iCheck\minimal\blue.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\green%402x.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\green.css" />
+    <Content Include="Content\Plugins\iCheck\minimal\green.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\grey%402x.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\grey.css" />
+    <Content Include="Content\Plugins\iCheck\minimal\grey.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\minimal%402x.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\minimal.css" />
+    <Content Include="Content\Plugins\iCheck\minimal\minimal.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\orange%402x.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\orange.css" />
+    <Content Include="Content\Plugins\iCheck\minimal\orange.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\pink%402x.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\pink.css" />
+    <Content Include="Content\Plugins\iCheck\minimal\pink.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\purple%402x.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\purple.css" />
+    <Content Include="Content\Plugins\iCheck\minimal\purple.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\red%402x.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\red.css" />
+    <Content Include="Content\Plugins\iCheck\minimal\red.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\yellow%402x.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\yellow.css" />
+    <Content Include="Content\Plugins\iCheck\minimal\yellow.png" />
+    <Content Include="Content\Plugins\iCheck\minimal\_all.css" />
+    <Content Include="Content\Plugins\iCheck\polaris\polaris%402x.png" />
+    <Content Include="Content\Plugins\iCheck\polaris\polaris.css" />
+    <Content Include="Content\Plugins\iCheck\polaris\polaris.png" />
+    <Content Include="Content\Plugins\iCheck\square\aero%402x.png" />
+    <Content Include="Content\Plugins\iCheck\square\aero.css" />
+    <Content Include="Content\Plugins\iCheck\square\aero.png" />
+    <Content Include="Content\Plugins\iCheck\square\blue%402x.png" />
+    <Content Include="Content\Plugins\iCheck\square\blue.css" />
+    <Content Include="Content\Plugins\iCheck\square\blue.png" />
+    <Content Include="Content\Plugins\iCheck\square\green%402x.png" />
+    <Content Include="Content\Plugins\iCheck\square\green.css" />
+    <Content Include="Content\Plugins\iCheck\square\green.png" />
+    <Content Include="Content\Plugins\iCheck\square\grey%402x.png" />
+    <Content Include="Content\Plugins\iCheck\square\grey.css" />
+    <Content Include="Content\Plugins\iCheck\square\grey.png" />
+    <Content Include="Content\Plugins\iCheck\square\orange%402x.png" />
+    <Content Include="Content\Plugins\iCheck\square\orange.css" />
+    <Content Include="Content\Plugins\iCheck\square\orange.png" />
+    <Content Include="Content\Plugins\iCheck\square\pink%402x.png" />
+    <Content Include="Content\Plugins\iCheck\square\pink.css" />
+    <Content Include="Content\Plugins\iCheck\square\pink.png" />
+    <Content Include="Content\Plugins\iCheck\square\purple%402x.png" />
+    <Content Include="Content\Plugins\iCheck\square\purple.css" />
+    <Content Include="Content\Plugins\iCheck\square\purple.png" />
+    <Content Include="Content\Plugins\iCheck\square\red%402x.png" />
+    <Content Include="Content\Plugins\iCheck\square\red.css" />
+    <Content Include="Content\Plugins\iCheck\square\red.png" />
+    <Content Include="Content\Plugins\iCheck\square\square%402x.png" />
+    <Content Include="Content\Plugins\iCheck\square\square.css" />
+    <Content Include="Content\Plugins\iCheck\square\square.png" />
+    <Content Include="Content\Plugins\iCheck\square\yellow%402x.png" />
+    <Content Include="Content\Plugins\iCheck\square\yellow.css" />
+    <Content Include="Content\Plugins\iCheck\square\yellow.png" />
+    <Content Include="Content\Plugins\iCheck\square\_all.css" />
+    <Content Include="Content\Plugins\jQuery_ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\Plugins\jQuery_ui\jquery-ui-1.10.3.css" />
+    <Content Include="Content\Plugins\jQuery_ui\jquery-ui-1.10.4.min.js" />
+    <Content Include="Content\Plugins\jQuery_ui\jquery-ui-1.11.2.min.js" />
+    <Content Include="Content\Plugins\jQuery_ui\jQuery_ui.css" />
+    <Content Include="Content\Plugins\jQuery_ui\jQuery_ui.min.css" />
+    <Content Include="Content\Plugins\line-icons\fonts\line-icons.svg" />
+    <Content Include="Content\Plugins\line-icons\fonts\Simple-Line-Icons.dev.svg" />
+    <Content Include="Content\Plugins\line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Content\Plugins\line-icons\icons-lte-ie7.js" />
+    <Content Include="Content\Plugins\line-icons\icons-reference.html" />
+    <Content Include="Content\Plugins\line-icons\index.html" />
+    <Content Include="Content\Plugins\line-icons\line-icons.css" />
+    <Content Include="Content\Plugins\line-icons\simple-line-icons.css" />
+    <Content Include="Content\Plugins\line-icons\style.css" />
+    <Content Include="Content\Plugins\mcustom_scrollbar\mCSB_buttons.png" />
+    <Content Include="Content\Plugins\mcustom_scrollbar\mcustom_scrollbar.css" />
+    <Content Include="Content\Plugins\mcustom_scrollbar\mcustom_scrollbar.min.css" />
+    <Content Include="Content\Plugins\select2\css\select2.css" />
+    <Content Include="Content\Plugins\select2\css\select2.min.css" />
+    <Content Include="Content\Plugins\select2\select2-bootstrap.css" />
+    <Content Include="Content\Plugins\select2\select2-spinner.gif" />
+    <Content Include="Content\Plugins\select2\select2.css" />
+    <Content Include="Content\Plugins\select2\select2.png" />
+    <Content Include="Content\Plugins\select2\select2x2.png" />
+    <Content Include="Content\Plugins\sweet_alert\sweetalert.css" />
+    <Content Include="Content\Plugins\sweet_alert\themes\facebook\facebook.css" />
+    <Content Include="Content\Plugins\sweet_alert\themes\google\google.css" />
+    <Content Include="Content\Plugins\sweet_alert\themes\twitter\twitter.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\theme.css" />
+    <Content Include="Content\ui.css" />
+    <Content Include="Content\fonts\lato\Lato-Black.woff" />
+    <Content Include="Content\fonts\lato\Lato-Bold.woff" />
+    <Content Include="Content\fonts\lato\lato-light.woff" />
+    <Content Include="Content\fonts\lato\Lato-Regular.woff" />
+    <Content Include="Content\fonts\lato\LatoLatin-Bold.woff" />
+    <Content Include="Content\fonts\lato\LatoLatin-Regular.woff" />
+    <Content Include="Content\fonts\lato\LatoLatinBlack-Regular.woff" />
+    <Content Include="Content\fonts\lato\LatoLatinLight-Regular.woff" />
+    <Content Include="Content\fonts\opensans\59ZRklaO5bWGqF5A9baEERJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="Content\fonts\opensans\DXI1ORHCpsQm3Vp6mXoaTa-j2U0lmluP9RWlSytm3ho.woff2" />
+    <Content Include="Content\fonts\opensans\DXI1ORHCpsQm3Vp6mXoaTaaRobkAwv3vxw3jMhVENGA.woff2" />
+    <Content Include="Content\fonts\opensans\DXI1ORHCpsQm3Vp6mXoaTegdm0LZdjqr5-oayXSOefg.woff2" />
+    <Content Include="Content\fonts\opensans\DXI1ORHCpsQm3Vp6mXoaTf8zf_FOSsgRmwsS7Aa9k2w.woff2" />
+    <Content Include="Content\fonts\opensans\DXI1ORHCpsQm3Vp6mXoaTRWV49_lSm1NYrwo-zkhivY.woff2" />
+    <Content Include="Content\fonts\opensans\DXI1ORHCpsQm3Vp6mXoaTT0LW-43aMEzIO6XUTLjad8.woff2" />
+    <Content Include="Content\fonts\opensans\DXI1ORHCpsQm3Vp6mXoaTZX5f-9o1vgP2EXwfjgl7AY.woff2" />
+    <Content Include="Content\fonts\opensans\EsvMC5un3kjyUhB9ZEPPwg.woff2" />
+    <Content Include="Content\fonts\opensans\k3k702ZOKiLJc3WVjuplzBWV49_lSm1NYrwo-zkhivY.woff2" />
+    <Content Include="Content\fonts\opensans\k3k702ZOKiLJc3WVjuplzD0LW-43aMEzIO6XUTLjad8.woff2" />
+    <Content Include="Content\fonts\opensans\k3k702ZOKiLJc3WVjuplzJX5f-9o1vgP2EXwfjgl7AY.woff2" />
+    <Content Include="Content\fonts\opensans\k3k702ZOKiLJc3WVjuplzK-j2U0lmluP9RWlSytm3ho.woff2" />
+    <Content Include="Content\fonts\opensans\k3k702ZOKiLJc3WVjuplzKaRobkAwv3vxw3jMhVENGA.woff2" />
+    <Content Include="Content\fonts\opensans\k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2" />
+    <Content Include="Content\fonts\opensans\k3k702ZOKiLJc3WVjuplzP8zf_FOSsgRmwsS7Aa9k2w.woff2" />
+    <Content Include="Content\fonts\opensans\K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="Content\fonts\opensans\LWCjsQkB6EMdfHrEVqA1KRJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="Content\fonts\opensans\MTP_ySUJH_bn48VBG8sNShWV49_lSm1NYrwo-zkhivY.woff2" />
+    <Content Include="Content\fonts\opensans\MTP_ySUJH_bn48VBG8sNSj0LW-43aMEzIO6XUTLjad8.woff2" />
+    <Content Include="Content\fonts\opensans\MTP_ySUJH_bn48VBG8sNSpX5f-9o1vgP2EXwfjgl7AY.woff2" />
+    <Content Include="Content\fonts\opensans\MTP_ySUJH_bn48VBG8sNSq-j2U0lmluP9RWlSytm3ho.woff2" />
+    <Content Include="Content\fonts\opensans\MTP_ySUJH_bn48VBG8sNSqaRobkAwv3vxw3jMhVENGA.woff2" />
+    <Content Include="Content\fonts\opensans\MTP_ySUJH_bn48VBG8sNSugdm0LZdjqr5-oayXSOefg.woff2" />
+    <Content Include="Content\fonts\opensans\MTP_ySUJH_bn48VBG8sNSv8zf_FOSsgRmwsS7Aa9k2w.woff2" />
+    <Content Include="Content\fonts\opensans\OpenSansLatin.woff" />
+    <Content Include="Content\fonts\opensans\RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="Content\fonts\opensans\u-WUoqrET9fUeobQW7jkRRJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="Content\fonts\opensans\xozscpT2726on7jbcb_pAhJtnKITppOI_IvcXXDNrsc.woff2" />
+    <Content Include="Content\Plugins\bootstrap\css\jasny-bootstrap.css.map" />
+    <Content Include="Content\Plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\Plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\Plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\Plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\Plugins\bootstrap_loading\css\ladda-theme.scss" />
+    <Content Include="Content\Plugins\bootstrap_loading\css\ladda.scss" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\Responsive\css\dataTables.responsive.scss" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\psd\collection.psd" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\psd\copy document.psd" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\psd\file_types.psd" />
+    <Content Include="Content\Plugins\datatable\datatables.extensions\TableTools\images\psd\printer.psd" />
+    <Content Include="Content\Plugins\datatable\images\Sorting icons.psd" />
+    <Content Include="Content\Plugins\font-awesome-animation\demo\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Plugins\font-awesome-animation\demo\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Plugins\font-awesome-animation\demo\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Plugins\font-awesome-animation\demo\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\Plugins\font_awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\Plugins\font_awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\Plugins\font_awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\Plugins\font_awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\Plugins\font_awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\Plugins\line-icons\fonts\line-icons.eot" />
+    <Content Include="Content\Plugins\line-icons\fonts\line-icons.ttf" />
+    <Content Include="Content\Plugins\line-icons\fonts\line-icons.woff" />
+    <Content Include="Content\Plugins\line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="Content\Plugins\line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="Content\Plugins\line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Content\Plugins\select2\select2-bootstrap-build.less" />
+    <Content Include="Content\Plugins\select2\select2-bootstrap-build.scss" />
+    <Content Include="Content\Plugins\select2\select2-bootstrap.less" />
+    <Content Include="Content\Plugins\select2\select2-bootstrap.scss" />
+    <Content Include="Content\Plugins\sweet_alert\themes\facebook\facebook.scss" />
+    <Content Include="Content\Plugins\sweet_alert\themes\google\google.scss" />
+    <Content Include="Content\Plugins\sweet_alert\themes\twitter\twitter.scss" />
+    <Content Include="Employee\Add_Edit.aspx" />
+    <Content Include="Employee\List.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Index.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
+    <Content Include="Report\Master_Report.aspx" />
+    <Content Include="Scripts\application.js" />
+    <Content Include="Scripts\application.min.js" />
+    <Content Include="Scripts\Guru.js" />
+    <Content Include="Scripts\Guru.min.js" />
+    <Content Include="Scripts\login-v1.js" />
+    <Content Include="Scripts\plugins.js" />
+    <Content Include="Scripts\plugins.min.js" />
+    <Content Include="Scripts\Plugins\autoNumeric\autoNumeric-1.9.25.js" />
+    <Content Include="Scripts\Plugins\autoNumeric\autoNumeric-1.9.25.min.js" />
+    <Content Include="Scripts\Plugins\backstretch\backstretch.min.js" />
+    <Content Include="Scripts\Plugins\blockUi\jquery.blockUI.js" />
+    <Content Include="Scripts\Plugins\bootstrap\bootstrap.js" />
+    <Content Include="Scripts\Plugins\bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap\css\bootstrap-override.css" />
+    <Content Include="Scripts\Plugins\bootstrap\css\bootstrap-rtl.min.css" />
+    <Content Include="Scripts\Plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Scripts\Plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Scripts\Plugins\bootstrap\css\jasny-bootstrap.css" />
+    <Content Include="Scripts\Plugins\bootstrap\css\jasny-bootstrap.min.css" />
+    <Content Include="Scripts\Plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Scripts\Plugins\bootstrap\jasny-bootstrap.js" />
+    <Content Include="Scripts\Plugins\bootstrap\jasny-bootstrap.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Scripts\Plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap\js\jasny-bootstrap.js" />
+    <Content Include="Scripts\Plugins\bootstrap\js\jasny-bootstrap.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\bootstrap_datepicker.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\bootstrap_datepicker.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.ar.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.az.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.bg.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.bs.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.ca.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.cs.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.cy.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.da.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.de.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.el.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.en-GB.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.es.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.et.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.eu.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.fa.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.fi.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.fo.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.fr-CH.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.fr.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.gl.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.he.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.hr.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.hu.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.hy.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.id.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.is.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.it-CH.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.it.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.ja.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.ka.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.kh.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.kk.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.kr.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.lt.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.lv.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.me.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.mk.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.ms.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.nb.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.nl-BE.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.nl.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.no.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.pl.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.pt-BR.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.pt.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.ro.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.rs-latin.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.rs.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.ru.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.sk.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.sl.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.sq.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.sr-latin.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.sr.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.sv.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.sw.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.th.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.tr.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.uk.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.vi.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_datepicker\locales\bootstrap-datepicker.zh-TW.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_dropdown\bootstrap_hover_dropdown.js" />
+    <Content Include="Scripts\Plugins\bootstrap_dropdown\bootstrap_hover_dropdown.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_loading\js\ladda.js" />
+    <Content Include="Scripts\Plugins\bootstrap_loading\js\prism.js" />
+    <Content Include="Scripts\Plugins\bootstrap_loading\js\spin.js" />
+    <Content Include="Scripts\Plugins\bootstrap_loading\lada.min.js" />
+    <Content Include="Scripts\Plugins\bootstrap_progressbar\bootstrap_progressbar.js" />
+    <Content Include="Scripts\Plugins\bootstrap_progressbar\bootstrap_progressbar.min.js" />
+    <Content Include="Scripts\Plugins\count_up\countUp.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\AutoFill\js\dataTables.autoFill.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\AutoFill\js\dataTables.autoFill.min.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\AutoFill\Readme.txt" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\ColReorder\js\dataTables.colReorder.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\ColReorder\js\dataTables.colReorder.min.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\ColReorder\Readme.txt" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\ColVis\js\dataTables.colVis.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\ColVis\js\dataTables.colVis.min.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\ColVis\Readme.txt" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\FixedColumns\js\dataTables.fixedColumns.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\FixedColumns\js\dataTables.fixedColumns.min.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\FixedHeader\js\dataTables.fixedHeader.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\FixedHeader\js\dataTables.fixedHeader.min.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\FixedHeader\Readme.txt" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\KeyTable\js\dataTables.keyTable.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\KeyTable\js\dataTables.keyTable.min.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\KeyTable\Readme.txt" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\Responsive\js\dataTables.responsive.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\Responsive\js\dataTables.responsive.min.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\Scroller\js\dataTables.scroller.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\Scroller\js\dataTables.scroller.min.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\Scroller\Readme.txt" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\TableTools\js\dataTables.tableTools.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\TableTools\js\dataTables.tableTools.min.js" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\TableTools\Readme.txt" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\TableTools\swf\copy_csv_xls.swf" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\TableTools\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Scripts\Plugins\datatables\jquery.dataTables.js" />
+    <Content Include="Scripts\Plugins\datatables\jquery.dataTables.min.js" />
+    <Content Include="Scripts\Plugins\dropzone\dropzone.js" />
+    <Content Include="Scripts\Plugins\gsap\main-gsap.min.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\pom.xml" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\converter\SVGConverter.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\converter\SVGConverterException.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\AbstractPool.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\BlockingQueuePool.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ObjectFactory.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ObjectPool.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\PoolException.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\pool\ServerObjectFactory.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\Server.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\ServerState.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\server\TimeOut.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\util\MimeType.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\java\com\highcharts\export\util\TempDir.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\boost.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\broken-axis.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\data.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\drilldown.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\funnel.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\heatmap.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-3d.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-convert.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts-more.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highcharts.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\highmaps.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\map.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\no-data-to-display.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\offline-exporting.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\solid-gauge.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\phantomjs\treemap.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\spring-convert.xml" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\broken-axis.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\data.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\drilldown.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\funnel.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\heatmap.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts-3d.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts-convert.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts-more.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highcharts.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\highstock.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\map.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\no-data-to-display.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\solid-gauge.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\phantomjs\treemap.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\spring-convert.xml" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\highcharts-export-convert.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\pom.xml" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\controller\ExportController.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\controller\ZeroRequestParameterException.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\filter\CorsFilter.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\interceptor\RequestInterceptor.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\java\com\highcharts\export\service\MonitorService.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\META-INF\context.xml" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\css\codemirror.css" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\css\demo.css" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\Highcharts-icon-160px.png" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\js\codemirror-compressed.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\resources\js\jquery-1.11.0.min.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\callback.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\config.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\jspf\lexl.svg" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\export-servlet.xml" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\spring-context.xml" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\web.xml" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\META-INF\context.xml" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\css\codemirror.css" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\css\demo.css" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\Highcharts-icon-160px.png" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\js\codemirror-compressed.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\resources\js\jquery-1.11.0.min.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\jspf\callback.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\jspf\config.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\jspf\lexl.svg" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\antisamy-1.4.3.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\aopalliance-1.0.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\batik-css-1.7.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\batik-ext-1.7.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\batik-util-1.7.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\bsh-core-2.0b4.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-beanutils-1.7.0.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-beanutils-core-1.7.0.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-codec-1.9.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-collections-3.2.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-configuration-1.5.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-digester-1.8.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-fileupload-1.2.2.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-httpclient-3.1.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-io-2.4.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-lang-2.6.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\commons-logging-1.1.3.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\esapi-2.1.0.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\gson-2.2.2.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\highcharts-export-convert-2.1.0.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\jsoup-1.8.1.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\log4j-1.2.17.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\nekohtml-1.9.12.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-aop-4.1.2.RELEASE.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-beans-4.1.2.RELEASE.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-context-4.1.2.RELEASE.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-core-4.1.2.RELEASE.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-expression-4.1.2.RELEASE.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-web-4.1.2.RELEASE.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\spring-webmvc-4.1.2.RELEASE.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\standard-1.1.2.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\xalan-2.7.0.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\xercesImpl-2.8.0.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\xml-apis-1.3.03.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\xml-apis-ext-1.3.04.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\lib\xom-1.2.5.jar" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\spring\export-servlet.xml" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\spring\spring-context.xml" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\web.xml" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\tmp\jsp\org\apache\jsp\WEB_002dINF\pages\demo_jsp.java" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\pom.xml" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\LICENSE.txt" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\boost.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\broken-axis.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\data.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\drilldown.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\funnel.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\heatmap.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\highcharts-3d.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\highcharts-convert.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\highcharts-more.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\highcharts.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\highmaps.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\jquery.1.9.1.min.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\map.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\no-data-to-display.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\offline-exporting.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\solid-gauge.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\treemap.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\gfx\vml-radial-gradient.png" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\graphics\meteogram-symbols-30px.png" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\graphics\skies.jpg" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\graphics\snow.png" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\graphics\sun.png" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\index.htm" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\adapters\standalone-framework.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\adapters\standalone-framework.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\highcharts-3d.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\highcharts-3d.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\highcharts-more.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\highcharts-more.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\highcharts.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\highcharts.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\boost.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\boost.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\broken-axis.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\broken-axis.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\canvas-tools.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\canvas-tools.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\data.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\data.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\drilldown.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\drilldown.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\exporting.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\exporting.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\funnel.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\funnel.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\heatmap.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\heatmap.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\no-data-to-display.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\no-data-to-display.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\offline-exporting.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\offline-exporting.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\solid-gauge.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\solid-gauge.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\treemap.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\modules\treemap.src.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\themes\dark-blue.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\themes\dark-green.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\themes\dark-unica.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\themes\gray.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\themes\grid-light.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\themes\grid.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\themes\sand-signika.js" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\js\themes\skies.js" />
+    <Content Include="Scripts\Plugins\icheck\icheck.js" />
+    <Content Include="Scripts\Plugins\icheck\icheck.min.js" />
+    <Content Include="Scripts\Plugins\icheck\jquery.icheck.js" />
+    <Content Include="Scripts\Plugins\icheck\jquery.icheck.min.js" />
+    <Content Include="Scripts\Plugins\jquery-block-ui\jquery.blockUI.js" />
+    <Content Include="Scripts\Plugins\jquery-block-ui\jquery.blockUI.min.js" />
+    <Content Include="Admin.Master" />
+    <Content Include="Report\dsReport.xsc">
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\dsReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReport.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\dsReport.xss">
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </Content>
+    <None Include="Scripts\Plugins\jQuery\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\Plugins\jQuery\jquery-2.1.4.js" />
+    <Content Include="Scripts\Plugins\jQuery\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\Plugins\jQuery_Cookies\jquery.cookies.js" />
+    <Content Include="Scripts\Plugins\jQuery_Cookies\jquery.cookies.min.js" />
+    <Content Include="Scripts\Plugins\jQuery_Cookie\jquery.cookie.js" />
+    <Content Include="Scripts\Plugins\jQuery_migrate\jquery-migrate-1.2.1.js" />
+    <Content Include="Scripts\Plugins\jQuery_migrate\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Scripts\Plugins\jQuery_ui\jquery-1.11.1.min.js" />
+    <Content Include="Scripts\Plugins\jQuery_ui\jquery-ui-1.11.2.min.js" />
+    <Content Include="Scripts\Plugins\jQuery_ui\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\Plugins\jQuery_ui\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\Plugins\mcustom_scrollbar\jquery.mCustomScrollbar.concat.min.js" />
+    <Content Include="Scripts\Plugins\modernizr\modernizr-2.6.2-respond-1.1.0.min.js" />
+    <Content Include="Scripts\Plugins\modernizr\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Plugins\noty\demo\allLayouts.html" />
+    <Content Include="Scripts\Plugins\noty\demo\allTypes.html" />
+    <Content Include="Scripts\Plugins\noty\demo\animate.css" />
+    <Content Include="Scripts\Plugins\noty\demo\api.html" />
+    <Content Include="Scripts\Plugins\noty\demo\buttons.css" />
+    <Content Include="Scripts\Plugins\noty\demo\consumingAlert.html" />
+    <Content Include="Scripts\Plugins\noty\demo\customContainer.html" />
+    <Content Include="Scripts\Plugins\noty\demo\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Scripts\Plugins\noty\demo\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Scripts\Plugins\noty\demo\index.html" />
+    <Content Include="Scripts\Plugins\noty\demo\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\Plugins\noty\demo\jquery-1.8.0.js" />
+    <Content Include="Scripts\Plugins\noty\demo\killer.html" />
+    <Content Include="Scripts\Plugins\noty\demo\notification_html.js" />
+    <Content Include="Scripts\Plugins\noty\demo\themeBootstrap.html" />
+    <Content Include="Scripts\Plugins\noty\demo\themeCss.html" />
+    <Content Include="Scripts\Plugins\noty\demo\usingMaxVisible.html" />
+    <Content Include="Scripts\Plugins\noty\demo\usingWithAnimate.css.html" />
+    <Content Include="Scripts\Plugins\noty\demo\usingWithButtons.html" />
+    <Content Include="Scripts\Plugins\noty\demo\usingWithButtons2.html" />
+    <Content Include="Scripts\Plugins\noty\demo\usingWithModal.html" />
+    <Content Include="Scripts\Plugins\noty\demo\usingWithOldOptions.html" />
+    <Content Include="Scripts\Plugins\noty\jquery.noty.js" />
+    <Content Include="Scripts\Plugins\noty\jquery.noty.min.js" />
+    <Content Include="Scripts\Plugins\noty\jquery.noty.packaged.js" />
+    <Content Include="Scripts\Plugins\noty\jquery.noty.packaged.min.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\jquery.noty.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\layouts\bottom.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\layouts\bottomCenter.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\layouts\bottomLeft.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\layouts\bottomRight.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\layouts\center.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\layouts\centerLeft.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\layouts\centerRight.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\layouts\inline.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\layouts\top.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\layouts\topCenter.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\layouts\topLeft.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\layouts\topRight.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\packaged\jquery.noty.packaged.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\packaged\jquery.noty.packaged.min.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\promise.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\themes\bootstrap.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\themes\default.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\themes\made.js" />
+    <Content Include="Scripts\Plugins\noty\js\noty\themes\relax.js" />
+    <Content Include="Scripts\Plugins\respond\respond.js" />
+    <Content Include="Scripts\Plugins\respond\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\Plugins\respond\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\Plugins\respond\respond.min.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\az.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\bg.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\ca.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\cs.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\da.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\de.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\en.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\es.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\et.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\eu.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\fa.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\fi.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\fr.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\gl.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\he.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\hi.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\hr.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\hu.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\id.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\is.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\it.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\ja.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\ko.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\lt.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\lv.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\mk.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\nb.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\nl.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\pl.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\pt-BR.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\pt.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\ro.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\ru.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\select2.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\select2.min.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\sk.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\sr.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\sv.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\th.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\tr.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\uk.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\vi.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\zh-CN.js" />
+    <Content Include="Scripts\Plugins\select2\i18n\zh-TW.js" />
+    <Content Include="Scripts\Plugins\select2\select2.js" />
+    <Content Include="Scripts\Plugins\select2\select2.min.js" />
+    <Content Include="Scripts\Plugins\sweet_alert\sweetalert.min.js" />
+    <Content Include="Scripts\Plugins\sweet_alert\sweetalert_dev.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-addon-i18n.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-addon-i18n.min.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-af.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-am.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-bg.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-ca.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-cs.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-da.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-de.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-el.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-es.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-et.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-eu.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-fi.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-fr.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-gl.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-he.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-hr.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-hu.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-id.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-it.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-ja.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-ko.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-lt.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-nl.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-no.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-pl.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-pt-BR.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-pt.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-ro.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-ru.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-sk.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-sr-RS.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-sr-YU.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-sv.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-th.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-tr.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-uk.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-vi.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-zh-CN.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\i18n\jquery-ui-timepicker-zh-TW.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\index.html" />
+    <Content Include="Scripts\Plugins\timepicker\dist\jquery-ui-sliderAccess.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\jquery-ui-timepicker-addon.css" />
+    <Content Include="Scripts\Plugins\timepicker\dist\jquery-ui-timepicker-addon.js" />
+    <Content Include="Scripts\Plugins\timepicker\dist\jquery-ui-timepicker-addon.min.css" />
+    <Content Include="Scripts\Plugins\timepicker\dist\jquery-ui-timepicker-addon.min.js" />
+    <Content Include="Scripts\Plugins\timepicker\jquery-ui-sliderAccess.js" />
+    <Content Include="Scripts\Plugins\timepicker\jquery-ui-timepicker-addon.css" />
+    <Content Include="Scripts\Plugins\timepicker\jquery-ui-timepicker-addon.js" />
+    <Content Include="Scripts\Plugins\timepicker\jquery-ui-timepicker-addon.min.css" />
+    <Content Include="Scripts\Plugins\timepicker\jquery-ui-timepicker-addon.min.js" />
+    <Content Include="Scripts\Plugins\timepicker\lib\jasmine-1.3.1\jasmine-html.js" />
+    <Content Include="Scripts\Plugins\timepicker\lib\jasmine-1.3.1\jasmine.css" />
+    <Content Include="Scripts\Plugins\timepicker\lib\jasmine-1.3.1\jasmine.js" />
+    <Content Include="Scripts\Plugins\timepicker\lib\jasmine-jquery.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\docs\examples.html" />
+    <Content Include="Scripts\Plugins\timepicker\src\docs\footer.html" />
+    <Content Include="Scripts\Plugins\timepicker\src\docs\formatting.html" />
+    <Content Include="Scripts\Plugins\timepicker\src\docs\header.html" />
+    <Content Include="Scripts\Plugins\timepicker\src\docs\i18n.html" />
+    <Content Include="Scripts\Plugins\timepicker\src\docs\intro.html" />
+    <Content Include="Scripts\Plugins\timepicker\src\docs\options.html" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-af.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-am.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-bg.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-ca.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-cs.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-da.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-de.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-el.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-es.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-et.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-eu.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-fi.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-fr.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-gl.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-he.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-hr.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-hu.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-id.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-it.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-ja.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-ko.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-lt.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-nl.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-no.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-pl.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-pt-BR.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-pt.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-ro.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-ru.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-sk.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-sr-RS.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-sr-YU.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-sv.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-th.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-tr.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-uk.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-vi.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-zh-CN.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\i18n\jquery-ui-timepicker-zh-TW.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\jquery-ui-sliderAccess.js" />
+    <Content Include="Scripts\Plugins\timepicker\src\jquery-ui-timepicker-addon.css" />
+    <Content Include="Scripts\Plugins\timepicker\src\jquery-ui-timepicker-addon.js" />
+    <Content Include="Scripts\validators.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Master\Settings.aspx" />
+    <Content Include="Master\Users.aspx" />
+    <Content Include="User_Control\ucPager.ascx" />
+    <Content Include="User_Control\ucProgressbar.ascx" />
+    <Content Include="User_Control\ucRecord_Search.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\Plugins\bootstrap\css\jasny-bootstrap.css.map" />
+    <Content Include="Scripts\Plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Scripts\Plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Scripts\Plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Scripts\Plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Scripts\Plugins\datatables\datatables.extensions\Responsive\Readme.md" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\app-convert.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\src\main\resources\log4j.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\app-convert.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\converter\SVGConverter.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\converter\SVGConverterException.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\AbstractPool%241.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\AbstractPool.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\BlockingQueuePool.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ObjectFactory.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ObjectPool.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\PoolException.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ServerObjectFactory%24PortStatus.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\pool\ServerObjectFactory.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\Server%241.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\Server.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\ServerState.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\server\TimeOut.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\util\MimeType.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\util\TempDir%241.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\com\highcharts\export\util\TempDir.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\classes\log4j.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-convert\target\maven-archiver\pom.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\resources\ESAPI.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\resources\log4j.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\pages\demo.jsp" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\pages\error.jsp" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\src\main\webapp\WEB-INF\spring\app-convert.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\controller\ExportController.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\controller\ZeroRequestParameterException.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\filter\CorsFilter.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\interceptor\RequestInterceptor.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\com\highcharts\export\service\MonitorService.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\ESAPI.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\classes\log4j.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web.war" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\controller\ExportController.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\controller\ZeroRequestParameterException.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\filter\CorsFilter.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\interceptor\RequestInterceptor.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\com\highcharts\export\service\MonitorService.class" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\ESAPI.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\classes\log4j.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\pages\demo.jsp" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\pages\error.jsp" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\highcharts-export-web\WEB-INF\spring\app-convert.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\highcharts-export\highcharts-export-web\target\maven-archiver\pom.properties" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\java\readme.md" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\phantomjs\readme.md" />
+    <Content Include="Scripts\Plugins\Highcharts-4.1.9\exporting-server\php\php-batik\index.php" />
+    <Content Include="Scripts\Plugins\icheck\icheck.jquery.json" />
+    <Content Include="Scripts\Plugins\icheck\jquery.icheck.min.js.map" />
+    <Content Include="Scripts\Plugins\jQuery\jquery-2.1.4.min.map" />
+    <Content Include="Scripts\Plugins\noty\demo\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Scripts\Plugins\noty\demo\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Scripts\Plugins\noty\demo\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Scripts\Plugins\noty\demo\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Scripts\Plugins\timepicker\lib\jasmine-1.3.1\MIT.LICENSE" />
+    <Content Include="Scripts\Plugins\timepicker\src\.jshintrc" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Config\Common.cs" />
+    <Compile Include="Config\FunBoxGuru.cs" />
+    <Compile Include="Config\Grid.cs" />
+    <Compile Include="Config\Pager.cs" />
+    <Compile Include="Employee\Add_Edit.aspx.cs">
+      <DependentUpon>Add_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\Add_Edit.aspx.designer.cs">
+      <DependentUpon>Add_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Employee\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Master\Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\dsReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Master_Report.aspx.cs">
+      <DependentUpon>Master_Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Report\Master_Report.aspx.designer.cs">
+      <DependentUpon>Master_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportPrintDocument.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="User_Control\ucPager.ascx.cs">
+      <DependentUpon>ucPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Control\ucPager.ascx.designer.cs">
+      <DependentUpon>ucPager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ucProgressbar.ascx.cs">
+      <DependentUpon>ucProgressbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Control\ucProgressbar.ascx.designer.cs">
+      <DependentUpon>ucProgressbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Control\ucRecord_Search.ascx.cs">
+      <DependentUpon>ucRecord_Search.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Control\ucRecord_Search.ascx.designer.cs">
+      <DependentUpon>ucRecord_Search.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GuruBal\GuruBal.csproj">
+      <Project>{37aee76d-7ff8-4c0e-95e5-3b9cedf8d34a}</Project>
+      <Name>GuruBal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GuruDal\GuruDal.csproj">
+      <Project>{776b7c41-e9bd-48d7-b13f-956947caaaee}</Project>
+      <Name>GuruDal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report\Print_Emp_Info.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4063</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4063/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

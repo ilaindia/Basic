@@ -1,0 +1,190 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.Master.cs" Inherits="School.Admin" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <meta name="description" content="ZIMS: Zerobugz Inventory Management System" />
+    <meta name="author" content="Prabakaran" />
+    <meta name="viewport" content="width=device-width" />
+    <title><%: Page.Title %> - Saravanan </title>
+
+    <link rel="stylesheet" href="~/Content/style.css" />
+    <link rel="stylesheet" href="~/Content/theme.css" />
+    <link rel="stylesheet" href="~/Content/ui.css" />
+    <link rel="stylesheet" href="~/Content/Plugins/datatable/css/jquery_dataTables.min.css" />
+    <link rel="stylesheet" href="~/Content/Plugins/jQuery_ui/jquery-ui-1.10.3.css" />
+    <link rel="stylesheet" href="~/Content/Plugins/sweet_alert/sweetalert.css" />
+    <style>
+        .sidebar .sidebar-inner .nav-sidebar > li.active > a i {
+            -webkit-animation: horizontal 2s ease infinite;
+            animation: horizontal 2s ease infinite;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="cpHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="fixed-topbar fixed-sidebar color-purple theme-sdtd body">
+    <div class="loader-overlay">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <asp:ScriptReference Name="modernizr" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="jquery_migrate" />
+                <asp:ScriptReference Name="jquery_cookies" />
+                <asp:ScriptReference Name="jquery_ui" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="Validator" />
+                <asp:ScriptReference Name="Dropzone" />
+            </Scripts>
+        </asp:ScriptManager>
+        <section>
+            <div class="sidebar">
+                <div class="logopanel">
+                    <h1>
+                        <img src="<%:ResolveUrl("~/App_Upload/Company_Img/MVM-APP-LOGO.png") %>" class="cmpny-logo" alt="Zerobugz" style="max-height: 30px; max-width: 210px; min-height: 30px; min-width: 157px;">
+                    </h1>
+                </div>
+                <div class="sidebar-inner">
+                    <div class="sidebar-top">
+                        <div class="userlogged clearfix">
+                            <i class="icon icons-faces-users-01"></i>
+                            <div class="user-details">
+                                <h4><%:School.Config.Usr.Name%></h4>
+                                <div class="dropdown user-login">
+                                    <button class="btn btn-xs dropdown-toggle btn-rounded" type="button" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="300">
+                                        <i class="online"></i><span><%:School.Config.Company.Name %></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-title">
+                        Navigation
+                    <div class="pull-right menu-settings">
+                        <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" data-delay="300">
+                            <i class="icon-settings"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:;" id="reorder-menu" class="reorder-menu">Reorder menu</a></li>
+                            <li><a href="javascript:;" id="remove-menu" class="remove-menu">Remove elements</a></li>
+                            <li><a href="javascript:;" id="hide-top-sidebar" class="hide-top-sidebar">Hide user &amp; search</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                    <ul class="nav nav-sidebar">
+                        <%--<li class="<%:Page.Title == "Home" ? "active":"" %>"><a href="<%: ResolveUrl("~/Index.aspx") %>"><i class="icon-home"></i><span data-translate="dashboard">Dashboard</span></a></li>
+                        <li class="nav-parent <%:((Page.Title == "Settings") || (Page.Title == "Users"))? "active":"" %>">
+                            <a href="javascript:;"><i class="icon-wrench"></i><span data-translate="builder">Masters</span> <span class="fa arrow"></span></a>
+                            <ul class="children collapse">
+                                <li class="<%:Page.Title == "Settings" ? "active":"" %>"><a href="<%: ResolveUrl("~/Master/Settings.aspx") %>">Settings</a></li>
+                                <li class="<%:Page.Title == "Users" ? "active":"" %>"><a href="<%: ResolveUrl("~/Master/Users.aspx") %>">User</a></li>
+                            </ul>
+                        </li>--%>
+                        <li class="<%:((Page.Title == "Emp-List") || (Page.Title == "Emp-Add_Edit")) ? "active":"" %>"><a href="<%: ResolveUrl("~/Employee/List.aspx") %>"><i class="icon-users"></i><span data-translate="dashboard">Employees</span></a></li>
+                    </ul>
+                    <div class="sidebar-footer clearfix">
+                        <a class="pull-left footer-settings" href="#" data-rel="tooltip" data-placement="top" data-original-title="Settings">
+                            <i class="icon-settings"></i>
+                        </a>
+                        <a class="pull-left toggle_fullscreen" href="#" data-rel="tooltip" data-placement="top" data-original-title="Fullscreen">
+                            <i class="icon-size-fullscreen"></i>
+                        </a>
+                        <a class="pull-left" href="#" data-rel="tooltip" data-placement="top" data-original-title="Lockscreen">
+                            <i class="icon-lock"></i>
+                        </a>
+                        <a class="pull-left btn-effect" href="<%:ResolveUrl("~/Logout.aspx") %>" data-modal="modal-1" data-rel="tooltip" data-placement="top" data-original-title="Logout">
+                            <i class="icon-power"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <!-- BEGIN TOPBAR -->
+                <div class="topbar">
+                    <!-- header-left -->
+                    <div class="header-left">
+                        <div class="topnav">
+                            <a class="menutoggle" href="#" data-toggle="sidebar-collapsed"><span class="menu__handle"><span>Menu</span></span></a>
+                        </div>
+                    </div>
+                    <!-- header-right -->
+                    <div class="header-right">
+                        <ul class="header-menu nav navbar-nav">
+                            <!-- BEGIN USER DROPDOWN -->
+                            <li class="dropdown" id="user-header">
+                                <a href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <img src="<%:School.Config.Common.CheckImgPath(ResolveUrl(School.Config.Usr.Img), ResolveClientUrl("~/App_Upload/User_Img/avatar.png")) %>" alt="User-Img" />
+                                    <span class="username">Hi, <%:School.Config.Usr.Name %></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="javascript:;"><i class="icon-user"></i><span>My Profile</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="<%:ResolveUrl("~/Logout.aspx") %>"><i class="icon-logout"></i><span>Logout</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END USER DROPDOWN -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- END TOPBAR -->
+                <!-- BEGIN PAGE CONTENT -->
+                <div class="page-content">
+                    <div id="FormBody">
+                        <asp:ContentPlaceHolder ID="cpBody" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="footer">
+                        <div class="copyright">
+                            <p class="pull-left sm-pull-reset">
+                                <span>Copyright <span class="copyright">©</span> <%:DateTime.Now.Year.ToString()%> </span>
+                                <a href="http://www.zerobugz.com" class="GuruPopOver_dark" rel="popover_dark" data-container="body" data-toggle="popover" data-placement="bottom" data-original-title="About Saravanan" data-title="About Us" data-img="<%:ResolveUrl("~/App_Upload/User_Img/avatar.png") %>" data-zcontent="Hi, I am Saravanan from salem, Tamilnadu. Currently I am doing BTech-(IT) in Adiyaman College of Engneering. If you want to contact me Pls call: 1234567890">Saravanan-B.Tech(IT)</a>.
+                            <span>All rights reserved. </span>
+                            </p>
+                            <p class="pull-right sm-pull-reset">
+                                <span><a href="javascript:;" class="m-r-10">Support</a> | <a href="javascript:;" class="m-l-10 m-r-10">Terms of use</a> | <a href="javascript:;" class="m-l-10">Privacy Policy</a></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END PAGE CONTENT -->
+            </div>
+        </section>
+        <script src="<%:ResolveClientUrl("~/Scripts/Plugins/blockUi/jquery.blockUI.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/plugins/mcustom_scrollbar/jquery.mcustomscrollbar.concat.min.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/plugins/bootstrap_dropdown/bootstrap_hover_dropdown.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/plugins/select2/select2.min.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/Plugins/timepicker/jquery-ui-timepicker-addon.min.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/plugins/backstretch/backstretch.min.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/plugins/bootstrap_progressbar/bootstrap_progressbar.min.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/plugins/count_up/countUp.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/application.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/plugins.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/plugins/datatables/jquery.datatables.min.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/Plugins/autoNumeric/autoNumeric-1.9.25.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/plugins/sweet_alert/sweetalert.min.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/Plugins/noty/jquery.noty.packaged.min.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/Plugins/icheck/icheck.min.js") %>"></script>
+        <script src="<%:ResolveClientUrl("~/Scripts/Guru.js") %>"></script>
+        <script type="text/javascript">
+            Sys.WebForms.PageRequestManager.getInstance().add_endRequest(Server_Script_Registration);
+            $(document).ready(function () {
+                Server_Script_Registration();
+            });
+        </script>
+    </form>
+</body>
+</html>

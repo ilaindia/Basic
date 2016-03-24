@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "School", "School\School.csproj", "{CD505BFA-BC12-4D20-9548-26EEB0DE610A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuruDal", "GuruDal\GuruDal.csproj", "{776B7C41-E9BD-48D7-B13F-956947CAAAEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuruBal", "GuruBal\GuruBal.csproj", "{37AEE76D-7FF8-4C0E-95E5-3B9CEDF8D34A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD505BFA-BC12-4D20-9548-26EEB0DE610A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD505BFA-BC12-4D20-9548-26EEB0DE610A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD505BFA-BC12-4D20-9548-26EEB0DE610A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD505BFA-BC12-4D20-9548-26EEB0DE610A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{776B7C41-E9BD-48D7-B13F-956947CAAAEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{776B7C41-E9BD-48D7-B13F-956947CAAAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{776B7C41-E9BD-48D7-B13F-956947CAAAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{776B7C41-E9BD-48D7-B13F-956947CAAAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37AEE76D-7FF8-4C0E-95E5-3B9CEDF8D34A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37AEE76D-7FF8-4C0E-95E5-3B9CEDF8D34A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37AEE76D-7FF8-4C0E-95E5-3B9CEDF8D34A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37AEE76D-7FF8-4C0E-95E5-3B9CEDF8D34A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
