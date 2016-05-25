@@ -1,0 +1,130 @@
+1.0 GETTING STARTED WITH JQUERY
+1.1 What is jQuery? Okay here’s the simplest definition I can give. jQuery is a JavaScript library. It can:
+
+Make your JavaScript code shorter, faster and cross browser.
+Manipulate your HTML, like showing or hiding something from the page.
+Handles events – it can do something when a user click a button or any other activity a user can do with a mouse.
+Animation – for example make a part of your page fade in, fade out or just simply make something move.
+AJAX – do a server request without refreshing your whole web page.
+1.2 This post. I assume you already know basic HTML, CSS and JavaScript. In this post, aside from the simple definition of jQuery above, we are just going to have two parts:
+
+The super straightforward, step by step tutorial or guide in running a very basic jQuery script. (2.0)
+We are going to take a look more of the jQuery basic concepts, as shown in #1 (3.0)
+2.0 RUN JQUERY IN 5 EASY STEPS
+2.1 Follow the steps below – these steps will lead you to run a very basic jQuery script that does a slide and toggle.
+
+Step 1: Create HTML page with its basic structure.
+
+<!-- step 1 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Tutorial for Beginner Live Demo</title>
+</head>
+<body>
+ 
+</body>
+</html>
+Step 2: Add element to be clicked. We’re gonna have a button in this example, we added an ID name to this button called myButton. Add the following code inside the “body” tag.
+
+<!-- step 2 -->
+<button id='myButton'>Click to Slide or Toggle</button>
+Step 3: Add the element to be shown or hidden. We’re gonna have a “p” tag with bunch of sample words inside. Add the following code below step 2′s code.
+
+<!-- step 3 -->
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec.
+</p>
+Step 4: Add the jQuery library. Aren’t you excited? You can also download your own copy of jQuery but in today’s example, we’ll be linking to Google’s copy of jQuery. Add the following code below step 3′s code.
+
+<!-- step 4 -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+Step 5: Add jQuery script. This script will show or hide the “p” tag and the words inside it. Notice that we selected the button by referencing our button’s ID myButton.
+
+<!-- step 5 -->
+<script>
+$("#myButton").click(function () {
+    $("p").slideToggle("slow");
+});
+</script>
+LIVE DEMO
+2.2 Download jQuery Code Examples
+The source code of this tutorial is part of our 20 useful jQuery source code package. Each item in the package has its own tutorial like the one above. 
+
+If you are just starting out to learn jQuery and serious about learning more, this is the right package for you. Click green button below to see the what is included in the package and download it there. 
+
+ DOWNLOAD JQUERY CODE EXAMPLES
+
+Congratulations! You are now a jQuery coder! Just kidding. Not yet. But don’t lose hope!
+
+To achieve being a real jQuery coder, like any other skill, it must be practiced and be well versed with its concepts. So continue to read below and make your jQuery wisdom a little bit better.
+
+3.0 JQUERY BASIC CONCEPTS
+3.1 Run jQuery when DOM is ready. We didn’t implement this in our example above because I want to give you a quick look on how to run a jQuery script and it is a very small web page anyway.
+
+But in reality, if you use jQuery in larger web pages, you have to run it when the DOM is ready. Here’s how:
+
+$(document).ready(function() {
+    // jQuery will run once everthing else in your web page is already loaded.
+    // All your jQuery codes here.
+});
+3.2 How to Select an Element in jQuery? Learning jQuery selectors are very important because you’re dealing with HTML elements within your web page.
+
+I’m gonna give you some of the most basic selectors being used:
+
+// selects 'only one' HTML element with ID "myButton", such as our example above
+// notice that we use hashes (#) for ids, like that of CSS
+$("#myButton");
+ 
+// selects all HTML elements with class "myClass", for instance: <div class='myClass'></div>
+// notice that we used dots (.) for classes, like that of CSS
+$(".myClass");
+ 
+// selects all button HTML element, for example: <button>Click Me!</button>
+$("button");
+ 
+// selects all div element, example: <div>Me and all other div will be selected!</div>
+$("div");
+ 
+// selects all anchor link element, for example: <a href="http://codeofaninja.com/">Me and all other 'a' tags will be selected!</a>
+$("a");
+Learn more jQuery Selectors
+
+3.3 jQuery Events. In our example above (2.0), we use a click event, in jQuery it was represented by the click() method. Here are some more jQuery events that you might find useful:
+
+$("button").click(function(){
+    // do something when user click the button
+});
+ 
+$("form").submit(function(){
+    // do something when user submits a form
+});
+ 
+$("#myDiv").hover(function(){
+    // do something when user hover an HTML element
+});
+ 
+$("#myTextbox").keyup(function(){
+    // do something when user types on a textbox with ID myTextbox
+});
+Learn more jQuery Events
+
+3.4 Animation Effects with jQuery. On our example above (2.0), the animation effect we used is the slideToggle(). Here are some other animations that you can do with jQuery:
+
+// slide or toggle animation with a <p> tag
+// you can change 'slow' to 'fast' or any number in milliseconds
+$("p").slideToggle("slow");
+ 
+$("p").slideToggle(1000, function() {  
+    // do something when slide up or down animation is done
+});
+ 
+// hide the matched elements with a sliding motion.
+$( "#book" ).slideUp( "slow", function() {
+    // animation complete
+});
+ 
+// display or hide the matched elements by animating their opacity.
+$( "#book" ).fadeToggle( "fast", function() {
+    // animation complete
+});
