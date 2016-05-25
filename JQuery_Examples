@@ -128,3 +128,8 @@ $( "#book" ).slideUp( "slow", function() {
 $( "#book" ).fadeToggle( "fast", function() {
     // animation complete
 });
+
+====================
+Free Admin Templates
+====================
+https://github.com/puikinsh/gentelella
